@@ -19,7 +19,7 @@ To run this project on your computer, you need to have the following:
 ![Ekran görüntüsü 2023-07-10 232229](https://github.com/quatronostro/com.LinkedinProject/assets/93223660/59d80088-2ec9-41b3-8036-de84376a8ba6)
 3. You must also enable the Google Sheets API for your Google account and create a project with OAuth consent. Follow these steps:
    - Go to this link and log in with your Google account. Then create a new project and give it any name you want:
-   - [https://console.cloud.google.com/](https://console.cloud.google.com/projectcreate)
+   - [https://console.cloud.google.com/projectcreate](https://console.cloud.google.com/projectcreate)
    
    ![create-project](https://github.com/quatronostro/com.LinkedinProject/assets/93223660/24a96f36-afd4-4426-8c22-99ad27f7951f)
    
@@ -78,9 +78,48 @@ To run this project on your computer, you need to have the following:
    
    ![oauth-credential](https://github.com/quatronostro/com.LinkedinProject/assets/93223660/702b8d13-65cd-42a3-b1fd-7b7852005f84)
 
-   - 
+   - Application type is going to be a simple "Desktop app" and again you can give a name whatever you want. Then click "Create" button. 
+  
+   ![create-client-ID](https://github.com/quatronostro/com.LinkedinProject/assets/93223660/f63be3eb-9803-40bd-9f2c-1942c83c7c3a)
+
+   - DONE! Now you can see the credentials. As for the last step Download Json file on your desktop. You will see credential.json file on your desktop. (I didn't add this file on this repo because every credential file is unique like API key.)
+
+5. Open this project codes on your computer than drag and drop the credential.json file on the desktop into the resources folder inside the project.
+6. Open [configuration.properties](https://github.com/quatronostro/com.LinkedinProject/blob/master/configuration.properties) file and enter your informations.
+
+   - You can find your Google Sheet ID in the link of your sheet. After the d/
+  
+   ![sheet-id](https://github.com/quatronostro/com.LinkedinProject/assets/93223660/f6420013-7cf5-42e6-9f2e-d57f2bb54558)
+
+   - Also you can find your sheet name at the buttom of the page
+  
+   ![sheet-name](https://github.com/quatronostro/com.LinkedinProject/assets/93223660/0183985a-5f5e-4c8a-9c16-62e0be2676d1)
+
+   - To give a range you have to use A1 notation, you can find more information about [A1 notation in here](https://developers.google.com/sheets/api/guides/concepts#cell)
+     - Example: Sheet1!A1:B2
+    
+   
+    
+**YOU ARE READY TO GO!!!**
+
+
+
+
+*I have to mention that, this is just a demo project. You can encounter with a lot of different types of error when you wanna run this.*
+- *First of all to run this project just use feature file. Because I haven't use Gradle before and I this there is some mistake about it and I can't run this project with Runners class. So if you have a solution please tell me :)*
+- *You can encounter with different Linkedin account enterence page, if so close the driver and run again the feature.*
+- *Some company names can cause problems, if so you can add one if else in step definition to say the program skip this company name.*
+- *As I mentioned before this is a demo project, so don't trust that much this program and always take your list to different sheet physically.*
+- *If you can't find way to do those steps, I helped from this videos maybe it helps you to:*
+   - https://www.youtube.com/watch?v=3wC-SCdJK2c&t=701s
+   - https://www.youtube.com/watch?v=8yJrQk9ShPg
+   - https://www.youtube.com/watch?v=P16uA1Hl4DI&t=84s
+
+
+
 
   
+
 
 
 
