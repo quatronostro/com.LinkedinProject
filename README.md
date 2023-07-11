@@ -13,6 +13,27 @@ To run this project on your computer, you need to have the following:
 - A Google account
 - A Google Sheets document with the following headers: Job Title, Company Name, Location, Date Applied, Status, Link
 
+## Project workflow
+1. Webdriver goes to the Linkedin account and logs in by entering the account details
+2. Clicks on the Jobs button and then My jobs button and opens the page of the job posts applied for
+3. One by one, it looks at the job advertisements on all the pages, takes the names of the companies and makes a listü
+4. In the meantime, it queries the jobs previously entered in excel with the Google Sheets API with the get method, extracts a list from it and compares these two lists
+5. If there are new postings, it goes back one by one to the job boards and tries to find them, but if there are no new postings, it prints all the company names it gets from Linkedin and API
+6. When it finds job post, it clicks on the post, get the necessary information and put it into the sheets document with API.
+7. Repeats this process for all remaining job posts
+
+## Notes
+*I have to mention that, this is just a demo project. You can encounter with a lot of different types of error when you wanna run this.*
+- *First of all to run this project just use feature file. Because I haven't use Gradle before and I think there is some mistake about it and I can't run this project with Runners class. So if you have a solution please tell me :)*
+- *You can encounter with different Linkedin account enterence page, if so close the driver and run again the feature.*
+- *Some company names can cause problems, if so you can add one if else in step definition to say the program skip this company name.*
+- *As I mentioned before this is a demo project, so don't trust that much this program and always take your list to different sheet physically.*
+- *I always try to run with ChromeDriver, so if you try to run with other browsers I don't know what you might encounter.*
+- *I have tried to write detailed steps on how you can run the project below. If you have any problems with these steps, feel free to contact me. If you can't find way to do those steps, I helped from this videos maybe it helps you to:*
+   - https://www.youtube.com/watch?v=3wC-SCdJK2c&t=701s
+   - https://www.youtube.com/watch?v=8yJrQk9ShPg
+   - https://www.youtube.com/watch?v=P16uA1Hl4DI&t=84s
+
 ## How to run the project
 1. You can download the zip file from the Code button or you can clone the project link to your IDE.
 2. You must create your own Google Sheets document and copy the headers from the image below. The program will write the data according to these headers, so make sure they match exactly. You can make changes to the code later if you want to use different headers.
@@ -105,15 +126,7 @@ To run this project on your computer, you need to have the following:
 
 
 
-*I have to mention that, this is just a demo project. You can encounter with a lot of different types of error when you wanna run this.*
-- *First of all to run this project just use feature file. Because I haven't use Gradle before and I this there is some mistake about it and I can't run this project with Runners class. So if you have a solution please tell me :)*
-- *You can encounter with different Linkedin account enterence page, if so close the driver and run again the feature.*
-- *Some company names can cause problems, if so you can add one if else in step definition to say the program skip this company name.*
-- *As I mentioned before this is a demo project, so don't trust that much this program and always take your list to different sheet physically.*
-- *If you can't find way to do those steps, I helped from this videos maybe it helps you to:*
-   - https://www.youtube.com/watch?v=3wC-SCdJK2c&t=701s
-   - https://www.youtube.com/watch?v=8yJrQk9ShPg
-   - https://www.youtube.com/watch?v=P16uA1Hl4DI&t=84s
+
 
 
 
