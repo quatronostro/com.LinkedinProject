@@ -39,6 +39,10 @@ To run this project on your computer, you need to have the following:
 
 ## How to run the project
 1. You can download the zip file from the Code button or you can clone the project link to your IDE.
+```bash
+  https://github.com/quatronostro/com.LinkedinProject.git
+  ```
+
 2. You must create your own Google Sheets document and copy the headers from the image below. The program will write the data according to these headers, so make sure they match exactly. You can make changes to the code later if you want to use different headers.
 ![Ekran görüntüsü 2023-07-10 232229](https://github.com/quatronostro/com.LinkedinProject/assets/93223660/59d80088-2ec9-41b3-8036-de84376a8ba6)
 3. You must also enable the Google Sheets API for your Google account and create a project with OAuth consent. Follow these steps:
@@ -128,7 +132,9 @@ To run this project on your computer, you need to have the following:
 
 
 
+## Feedback
 
+If you have any feedback on the project, please contact me at berke.bar@hotmail.com.
 
 
 
