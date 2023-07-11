@@ -25,7 +25,10 @@ To run this project on your computer, you need to have the following:
 ## Notes
 *I have to mention that, this is just a demo project. You can encounter with a lot of different types of error when you wanna run this.*
 - *First of all to run this project just use feature file. Because I haven't use Gradle before and I think there is some mistake about it and I can't run this project with Runners class. So if you have a solution please tell me :)*
-- *You can encounter with different Linkedin account enterence page, if so close the driver and run again the feature.*
+- *You can encounter with different Linkedin account enterence page, if so close the driver and run again the feature. Like the picture below. This is a authwall page, It doesn't appear every time you want to log in.*
+
+  ![authwall](https://github.com/quatronostro/com.LinkedinProject/assets/93223660/fc28280c-aaa4-4d65-9aa7-97828a5bce76)
+  
 - *Some company names can cause problems, if so you can add one if else in step definition to say the program skip this company name.*
 - *As I mentioned before this is a demo project, so don't trust that much this program and always take your list to different sheet physically.*
 - *I always try to run with ChromeDriver, so if you try to run with other browsers I don't know what you might encounter.*
@@ -132,6 +135,7 @@ To run this project on your computer, you need to have the following:
 
 
   
+
 
 
 
