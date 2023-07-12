@@ -1,5 +1,5 @@
 # com.LinkedinProject
-This project is an automation solution for tracking my job applications on LinkedIn using Java, Gradle, Cucumber and Google Sheets API.
+This project is an automation solution for tracking my job applications on LinkedIn using Java, Gradle, Cucumber and Google Sheets API. You can use for tracking your job applications, just follow the instructions.
 
 ## Project purpose
 I am currently looking for a new job and I want to keep track of all the applications I send on LinkedIn. I used to enter the details of each application manually on a Google Sheets document, but I found this process tedious and time-consuming. Therefore, I decided to create an automation program that can fill in the Google Sheets document for me based on the information I provide on LinkedIn.
