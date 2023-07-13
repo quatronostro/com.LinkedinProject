@@ -43,16 +43,22 @@ public class LinkedinPage {
     @FindBy(xpath = "//h1[@class]")
     public WebElement jobTitle;
 
-    @FindBy(xpath = "//span[@class='jobs-unified-top-card__company-name']")
+    @FindBy(xpath = "(//a[@href])[9]")
     public WebElement companyName;
 
-    @FindBy(xpath = "//span[@class='jobs-unified-top-card__bullet']")
-    public WebElement location;
+    @FindBy(xpath = "//span[@class='white-space-pre']")
+    public WebElement startElement;
 
-    @FindBy(xpath = "//span[@class='jobs-unified-top-card__workplace-type']")
-    public WebElement workPlaceType;
+    @FindBy(xpath = "(//span[@class='white-space-pre'])[2]")
+    public WebElement endElement;
 
-    @FindBy(xpath = "//li[@class='jobs-unified-top-card__job-insight']")
+    @FindBy(xpath = "(//span[@class='white-space-pre'])[2]")
+    public WebElement startElement2;
+
+    @FindBy(xpath = "(//span[@class='white-space-pre'])[3]")
+    public WebElement endElement2;
+
+    @FindBy(xpath = "//div[3]/ul/li[1]/span")
     public WebElement jobInsight;
 
 }

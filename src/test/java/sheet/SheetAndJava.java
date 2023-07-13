@@ -5,6 +5,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.security.CodeSigner;
 import java.security.GeneralSecurityException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
@@ -76,9 +78,13 @@ public class SheetAndJava {
     public static void putValue(String jobTitle, String companyName, String location, String workPlaceType, String jobInsight) throws IOException, GeneralSecurityException {
         sheetsService = getSheetsService();
 
+        LocalDate currentDate = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String date = currentDate.format(formatter);
+
         ValueRange appendBody = new ValueRange()
                 .setValues(Arrays.asList(
-                        Arrays.asList(jobTitle, companyName, location, workPlaceType, jobInsight)
+                        Arrays.asList(jobTitle, companyName, location, workPlaceType, jobInsight, date)
                 ));
 
         AppendValuesResponse appendResult = sheetsService.spreadsheets().values()
