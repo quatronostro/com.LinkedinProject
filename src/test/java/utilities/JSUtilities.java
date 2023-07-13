@@ -54,4 +54,21 @@ public class JSUtilities {
     public static int getNumberOfOpenWindows(WebDriver driver) {
         return driver.getWindowHandles().size();
     }
+
+    public static String getLocationWorkPlaceTypeLinkedin(WebDriver driver, WebElement startElement, WebElement endElement){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        String script = "var startElement = arguments[0];" +
+                "var endElement = arguments[1];" +
+                "var text = '';" +
+                "var node = startElement.nextSibling;" +
+                "while (node && node !== endElement) {" +
+                "    if (node.nodeType === Node.TEXT_NODE) {" +
+                "        text += node.textContent.trim();" +
+                "    }" +
+                "    node = node.nextSibling;" +
+                "}" +
+                "return text;";
+
+        return (String) js.executeScript(script, startElement, endElement);
+    }
 }
