@@ -112,7 +112,10 @@ To run this project on your computer, you need to have the following:
 
    - DONE! Now you can see the credentials. As for the last step Download Json file on your desktop. You will see credential.json file on your desktop. (I didn't add this file on this repo because every credential file is unique like API key.)
 
-5. Open this project codes on your computer than drag and drop the credential.json file on the desktop into the resources folder inside the project.
+5. Open this project codes on your computer than drag and drop the credential.json file on the desktop into the resources folder inside the project. It should look like this:
+
+  ![credentials-path](https://github.com/quatronostro/com.LinkedinProject/assets/93223660/0ecc8900-fd78-46b0-8558-4f7640d3afab)
+
 6. Open [configuration.properties](https://github.com/quatronostro/com.LinkedinProject/blob/master/configuration.properties) file and enter your informations.
 
    - You can find your Google Sheet ID in the link of your sheet. After the d/
@@ -130,7 +133,7 @@ To run this project on your computer, you need to have the following:
     
 **YOU ARE READY TO GO!!!**
 
-*When you try to run first time, you will encounter with Google page that wants to you verify that is you and continue your task*
+*When you try to run first time, you will encounter with Google page that wants to you verify that is you and continue your task. Just choose your google account and click Continue.*
 
 
 ## Feedback
@@ -142,6 +145,7 @@ If you have any feedback on the project, please contact me at berke.bar@hotmail.
 
 
   
+
 
 
 
