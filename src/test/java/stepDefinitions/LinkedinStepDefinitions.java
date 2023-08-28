@@ -11,6 +11,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.JSUtilities;
 import utilities.ReusableMethods;
+
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.util.*;
@@ -25,40 +26,46 @@ public class LinkedinStepDefinitions {
     Map<String, Integer> differenceMap = new HashMap<>();
     String workPlaceType;
     String location;
+    int totalPageNum = 1;
 
     @Given("Webdriver goes to linkedin")
     public void webdriverGoesToLinkedin() {
         Driver.getDriver().get(ConfigReader.getProperty("linkedinUrl"));
     }
+
     @Then("Enters valid account info and cliks Sign In button")
     public void enters_valid_account_info_and_cliks_sign_in_button() {
         try {
             Assert.assertTrue(linkedinPage.emailBox.isDisplayed());
-        }catch (Exception e){
+        } catch (Exception e) {
             Driver.getDriver().navigate().refresh();
         }
         linkedinPage.emailBox.sendKeys(ConfigReader.getProperty("linkedinEmail"));
         linkedinPage.passBox.sendKeys(ConfigReader.getProperty("linkedinPass"));
         linkedinPage.signInButton.click();
-        ReusableMethods.sleep(2);
+        ReusableMethods.sleep(5);
     }
+
     @Then("Clicks Jobs button on header")
     public void clicks_jobs_button_on_header() {
         linkedinPage.jobsButton.click();
         ReusableMethods.sleep(1);
     }
+
     @Then("Clicks My Jobs button then clicks Applied Jobs button")
     public void clicks_my_jobs_button_then_clicks_applied_jobs_button() {
+        ReusableMethods.sleep(1);
         linkedinPage.myJobsButton.click();
         ReusableMethods.sleep(1);
         linkedinPage.appliedButton.click();
         ReusableMethods.sleep(1);
     }
+
     @And("Takes company names")
     public void takesCompanyNames() throws GeneralSecurityException, IOException {
 
         // for Linkedin
-        while (linkedinPage.nextButton.isEnabled()){
+        while (linkedinPage.nextButton.isEnabled()) {
             ReusableMethods.sleep(2);
             for (int i = 0; i < linkedinPage.companyNameList.size(); i++) {
                 companyNamesList.add((linkedinPage.companyNameList.get(i).getText()));
@@ -67,6 +74,7 @@ public class LinkedinStepDefinitions {
             JSUtilities.scrollToElement(Driver.getDriver(), linkedinPage.nextButton);
             try {
                 linkedinPage.nextButton.click();
+                totalPageNum++;
             } catch (Exception e) {
                 break;
             }
@@ -80,6 +88,7 @@ public class LinkedinStepDefinitions {
             apiResponseList.add(values.get(i).get(0).toString());
         }
     }
+
     @And("Verify that all company names are matching with sheet")
     public void verifyThatAllCompanyNamesAreMatchingWithSheet() {
 
@@ -111,7 +120,7 @@ public class LinkedinStepDefinitions {
             System.out.println("Lists have different elements or different frequency");
 
             // create a new Map or a List to store the differences
-             // or List<String> differenceList = new ArrayList<>();
+            // or List<String> differenceList = new ArrayList<>();
 
             // loop through each map and find the elements that are not in both maps
             for (Map.Entry<String, Integer> entry : mapForCompanies.entrySet()) {
@@ -154,7 +163,7 @@ public class LinkedinStepDefinitions {
     @And("Add mismatched data to sheet")
     public void addMismatchedDataToSheet() throws GeneralSecurityException, IOException {
 
-        try{
+        try {
             for (int i = 0; i < misMatchedCompanyList.size(); i++) {
 
                 String chosenOne = misMatchedCompanyList.get(i).trim();
@@ -200,7 +209,7 @@ public class LinkedinStepDefinitions {
                     String text = JSUtilities.getLocationWorkPlaceTypeLinkedin(Driver.getDriver(),
                             linkedinPage.startElement, linkedinPage.endElement);
 
-                    if (text.isEmpty()){
+                    if (text.isEmpty()) {
                         String text2 = JSUtilities.getLocationWorkPlaceTypeLinkedin(Driver.getDriver(),
                                 linkedinPage.startElement2, linkedinPage.endElement2);
 

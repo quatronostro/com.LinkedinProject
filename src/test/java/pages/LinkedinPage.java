@@ -25,7 +25,7 @@ public class LinkedinPage {
     @FindBy(xpath = "//*[@title='Jobs']")
     public WebElement jobsButton;
 
-    @FindBy(xpath = "//*[text()='My jobs']")
+    @FindBy(xpath = "(//*[text()='My jobs'])[1]")
     public WebElement myJobsButton;
 
     @FindBy(xpath = "//*[text()='Applied'][1]")

@@ -84,7 +84,7 @@ public class SheetAndJava {
 
         ValueRange appendBody = new ValueRange()
                 .setValues(Arrays.asList(
-                        Arrays.asList(jobTitle, companyName, location, workPlaceType, jobInsight, date)
+                        Arrays.asList(date, jobTitle, companyName, location, workPlaceType, jobInsight)
                 ));
 
         AppendValuesResponse appendResult = sheetsService.spreadsheets().values()

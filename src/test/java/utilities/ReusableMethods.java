@@ -158,5 +158,10 @@ public class ReusableMethods {
         return element;
     }
 
+    public static void clickChosenElement(List<WebElement> elements) {
+        WebElement chosenOneXpath = elements.get(0);
+        chosenOneXpath.click();
+    }
+
 
 }
